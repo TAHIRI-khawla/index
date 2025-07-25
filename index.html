@@ -1,127 +1,114 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ma Boutique</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boutique en ligne</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#4F46E5',
+secondary: '#6B7280'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+}
+}
+}
+}
+</script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+.hero-section {
+background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 40%, rgba(255, 255, 255, 0) 100%), url('/img/jiji_clean_express.jpg');
+background-size: cover;
+background-position: center;
+}
+</style>
 </head>
+<body class="bg-white min-h-screen">
+<header class="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
+<nav class="container mx-auto px-4 h-16 flex items-center justify-between">
+<a href="#" class="text-2xl font-['Pacifico'] text-primary">JIJI CLEAN EXPRESS</a>
+<div class="flex items-center space-x-8">
+<a href="/index.html" class="text-gray-900 hover:text-primary transition-colors">Accueil</a>
+<a href="/produit.html" data-readdy="true" class="text-gray-900 hover:text-primary transition-colors">Produits</a>
+<a href="/contact.html" class="text-gray-900 hover:text-primary transition-colors">Contact</a>
+</div>
+</nav>
+</header>
+<main class="pt-16">
+<section class="hero-section min-h-[600px] flex items-center">
+<div class="container mx-auto px-4">
+<div class="max-w-2xl">
+<h1 class="text-5xl font-bold text-gray-900 mb-6">Découvrez Notre Collection Exclusive</h1>
+<p class="text-xl text-gray-700 mb-8">Des pièces uniques sélectionnées avec soin pour votre style personnel</p>
+<button class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-primary/90 transition-colors">
+Découvrir nos produits
+</button>
+</div>
+</div>
+</section>
 
-<body>
 
-  <!-- Barre de navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-
-      <a class="navbar-brand" href="#">Notre boutique </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="#">Accueil</a></li>
-          <li class="nav-item"><a class="nav-link" href="#produits">Produits</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-      </div>
-
-      <a class="navbar-brand" href="#">Notre application/a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link active" href="#">Accueil</a></li>
-            <li class="nav-item"><a class="nav-link" href="#produits">Produits</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-          </ul>
-        </div>
-    </div>
-  </nav>
-
-  <!-- Section accueil -->
-  <header class="bg-light text-center py-5">
-    <div class="container">
-      <h1 class="display-4">Bienvenue sur Ma Boutique</h1>
-      <p class="lead">Découvrez nos produits de qualite a prix competitifs.</p>
-      <a href="#produits" class="btn btn-primary">Voir les produits</a>
-    </div>
-  </header>
-
-  <!-- Section produits -->
-  <section id="produits" class="py-5 bg-white">
-    <div class="container">
-      <h2 class="text-center mb-4">Nos Produits</h2>
-      <div class="row">
-        <!-- Produit 1 -->
-        <div class="col-md-4">
-          <div class="card mb-4">
-            <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Produit 1">
-            <div class="card-body">
-              <h5 class="card-title">Produit 1</h5>
-              <p class="card-text">Description breve du produit 1.</p>
-              <a href="#" class="btn btn-outline-primary">En savoir plus</a>
-            </div>
-          </div>
-        </div>
-        <!-- Produit 2 -->
-        <div class="col-md-4">
-          <div class="card mb-4">
-            <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Produit 2">
-            <div class="card-body">
-              <h5 class="card-title">Produit 2</h5>
-              <p class="card-text">Description breve du produit 2.</p>
-              <a href="#" class="btn btn-outline-primary">En savoir plus</a>
-            </div>
-          </div>
-        </div>
-        <!-- Produit 3 -->
-        <div class="col-md-4">
-          <div class="card mb-4">
-            <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Produit 3">
-            <div class="card-body">
-              <h5 class="card-title">Produit 3</h5>
-              <p class="card-text">Description breve du produit 3.</p>
-              <a href="#" class="btn btn-outline-primary">En savoir plus</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section contact -->
-  <section id="contact" class="bg-light py-5">
-    <div class="container">
-      <h2 class="text-center mb-4">Contactez-nous</h2>
-      <form>
-        <div class="row mb-3">
-          <div class="col-md-6">
-            <input type="text" class="form-control" placeholder="Votre nom" required>
-          </div>
-          <div class="col-md-6">
-            <input type="email" class="form-control" placeholder="Votre email" required>
-          </div>
-        </div>
-        <div class="mb-3">
-          <textarea class="form-control" rows="4" placeholder="Votre message" required></textarea>
-        </div>
-        <div class="text-center">
-          <button type="submit" class="btn btn-primary">Envoyer</button>
-        </div>
-      </form>
-    </div>
-  </section>
-
-  <!-- Pied de page -->
-  <footer class="bg-dark text-white text-center py-3">
-    <div class="container">
-      &copy; 2025 Ma Boutique - Tous droits reserves.
-    </div>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</main>
+<footer class="bg-gray-900 text-white py-12">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div>
+<h3 class="text-xl font-bold mb-4">À propos</h3>
+<p class="text-gray-400">Votre destination pour des produits de luxe exclusifs et un service personnalisé.</p>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-4">Contact</h3>
+<p class="text-gray-400">Email: contact@boutique.fr</p>
+<p class="text-gray-400">Tél: +33 1 23 45 67 89</p>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-4">Suivez-nous</h3>
+<div class="flex space-x-4">
+<a href="#" class="text-gray-400 hover:text-white transition-colors">
+<i class="ri-facebook-fill ri-lg"></i>
+</a>
+<a href="#" class="text-gray-400 hover:text-white transition-colors">
+<i class="ri-instagram-fill ri-lg"></i>
+</a>
+<a href="#" class="text-gray-400 hover:text-white transition-colors">
+<i class="ri-twitter-fill ri-lg"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
+<p>&copy; 2025 Boutique en ligne. Tous droits réservés.</p>
+</div>
+</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+const form = document.querySelector('form');
+form.addEventListener('submit', function(e) {
+e.preventDefault();
+alert('Message envoyé avec succès!');
+form.reset();
+});
+});
+</script>
 </body>
-
 </html>
